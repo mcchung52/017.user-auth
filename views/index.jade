@@ -1,11 +1,9 @@
-doctype html
-html(lang="en")
-  head
-    title Register
-    link(href="bower_components/bootstrap/dist/css/bootstrap.min.css", rel='stylesheet')
-    link(href="bower_components/font-awesome/css/font-awesome.min.css", rel='stylesheet')
+extends ./layout
+
+block css
     link(href="css/style.css", rel='stylesheet')
-  body
+    
+block content
     .container
       h3 Register
       .register.col-xs-12.col-sm-6
@@ -52,7 +50,5 @@ html(lang="en")
               tr
                 td
                   span#errLogin
-
-    script(src='bower_components/jquery/dist/jquery.min.js')
-    script(src='bower_components/bootstrap/dist/js/bootstrap.min.js')
-    script(src='js/main.js')
+block js
+    script(src='js/indexPage.js')
