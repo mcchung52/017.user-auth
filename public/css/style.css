@@ -1,6 +1,10 @@
 /* body {
   background-color: gray;
 } */
-span {
+tbody span {
   color: red;
+}
+
+li span {
+  color: white;
 }
