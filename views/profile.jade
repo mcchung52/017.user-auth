@@ -1,0 +1,28 @@
+extends ./layout
+
+block css
+    link(href="/css/style.css", rel='stylesheet')
+    
+block content
+    .container
+      h3 Edit Profile
+      img()
+        table
+          tbody
+            tr
+              td Update your avatar link:
+              td 
+                input#avatar(type= 'text')
+            tr
+              td Enter your email:
+              td
+                input#email(type= 'email')
+            tr
+              td 
+                button.btn.btn-primary#save Save
+            tr
+              td
+                span#err
+         
+block js
+    script(src='/js/profilePage.js')

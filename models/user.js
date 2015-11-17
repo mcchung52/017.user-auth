@@ -8,7 +8,9 @@ var User;
 
 var userSchema = Schema({
   username: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
+  password: { type: String, required: true },
+  email: { type: String, required: true },
+  avatar: { type: String }
 });
 
 userSchema.statics.register = function(user, cb) {

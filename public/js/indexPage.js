@@ -26,9 +26,10 @@ function loginClicked() {
     obj.password = $('#passL').val();
     $.post('/users/login', obj)
     .done(function(data){
-      console.log(data);
+      console.log('/users/login success',data);
       var $msg = $('<p>').text('Login successful');
       // do something cuz it's successful
+      window.location.replace('/users/login');
     })
     .fail(function(data){
       console.log(data);

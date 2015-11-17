@@ -5,7 +5,7 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
   //res.cookie('cookiename', 'cookievalue');
-  res.render("index");//, {title: 'Auth'});
+  res.render("index", {title: 'Register'});
 });
 
 
