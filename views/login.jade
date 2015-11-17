@@ -32,12 +32,18 @@ html(lang="en")
               a(href='#') Page 3
           ul.nav.navbar-nav.navbar-right
             li
+              p 
+            li
               a(href='#')#logout
                 span.glyphicon.glyphicon-log-out
                 |  Log out
-            li
-              a(href='#')
+            li.dropdown(role='presentation')
+              a.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
                 span.glyphicon.glyphicon-menu-hamburger
+              ul.dropdown-menu
+                li
+                  a(href='/users/edit/profile') Edit Profile
+                  
     .container
       h3 You are logged in!
       h6 Check out the bar on the top right to change your profile

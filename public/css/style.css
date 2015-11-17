@@ -1,7 +1,7 @@
 /* body {
   background-color: gray;
 } */
-tbody span {
+span.err {
   color: red;
 }
 

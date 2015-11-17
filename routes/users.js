@@ -17,7 +17,7 @@ router.post('/register', function(req, res) {
 
 router.post('/login', function(req, res) {
   User.authenticate(req.body, function(err, user) {
-    if(err) return res.status(400).send(err);
+    if(err || !user) return res.status(400).send(err);
 
     res.cookie('username', user.username);
     res.cookie('userId', user._id.toString());
@@ -48,12 +48,22 @@ router.post('/logout', function(req, res){
   res.status(200).send('logout successful');
 });
 
-router.post('/edit/profile', function(req, res){
+router.get('/edit/profile', authMiddleware, function(req, res){
+  //if(err) return res.status(400).send(err);
+  // console.log(req.body);
+  // res.clearCookie('username');
+  // res.clearCookie('userId');
+  // res.status(200).send('logout successful');
+
+  res.render('profile');
+});
+
+router.post('/edit/profile', authMiddleware, function(req, res){
   //if(err) return res.status(400).send('logout failed');
   console.log(req.body);
-  res.clearCookie('username');
-  res.clearCookie('userId');
-  res.status(200).send('logout successful');
+  // res.clearCookie('username');
+  // res.clearCookie('userId');
+  // res.status(200).send('logout successful');
 });
 
 

@@ -8,7 +8,7 @@ function init() {
 }
 
 function loginClicked() {
-  $('#errLogin').empty();
+  $('.err').empty();
   var err = '';
   var perfect = true;
   if ($('#userL').val()==='') {
@@ -31,9 +31,9 @@ function loginClicked() {
       // do something cuz it's successful
       window.location.replace('/users/login');
     })
-    .fail(function(data){
-      console.log(data);
-      $('#errLogin').text(data.responseText);
+    .fail(function(error){
+      console.log(error);
+      $('#errLogin').text(error.responseText);
     });
   }
   else {
@@ -42,7 +42,7 @@ function loginClicked() {
 }
 
 function regClicked() {
-  $('#err').empty();
+  $('.err').empty();
   var err = '';
   var perfect = true;
   if ($('#userR').val()==='') {
@@ -69,12 +69,16 @@ function regClicked() {
     $.post('/users/register', obj)
     .done(function(data){
       console.log(data);
-      var $msg = $('<p>').text('Register successful');
+      $('#err').text('Register successful. Please log in.');
       // do something cuz it's successful
+      $('#userR').val('');
+      $('#passR').val('');
+      $('#rePassR').val('');
+      //$('.register tbody').append($msg);
     })
-    .fail(function(data){
-      console.log(data);
-      $('#err').text(data.responseText);
+    .fail(function(error){
+      console.log(error);
+      $('#err').text(error.responseText);
     });
   }
   else {
