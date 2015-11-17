@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    title Register
+    link(href="bower_components/bootstrap/dist/css/bootstrap.min.css", rel='stylesheet')
+    link(href="bower_components/font-awesome/css/font-awesome.min.css", rel='stylesheet')
+    link(href="css/style.css", rel='stylesheet')
+  body
+    .container
+      h3 Register
+      .register.col-xs-12.col-sm-6
+          table
+            tbody
+              tr
+                td Enter your user name:
+              tr
+                td
+                  input#userR(type= 'text')
+              tr
+                td Enter your password:
+              tr
+                td 
+                  input#passR(type= 'password')
+              tr
+                td Re-enter your password:
+              tr
+                td 
+                  input#rePassR(type= 'password')
+              tr
+                td 
+                  button.btn.btn-primary#register Register
+              tr
+                td
+                  span#err
+      h3 Log in
+      .login.col-xs-12.col-sm-6
+          table
+            tbody
+              tr
+                td User Name
+              tr
+                td
+                  input#userL(type= 'text')
+              tr
+                td Password
+              tr
+                td 
+                  input#passL(type= 'password')
+              tr
+                td 
+                  button.btn.btn-primary#login Login
+              tr
+                td
+                  span#errLogin
+
+    script(src='bower_components/jquery/dist/jquery.min.js')
+    script(src='bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='js/main.js')
