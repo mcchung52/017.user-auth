@@ -4,7 +4,9 @@
 span.err {
   color: red;
 }
-
 li span {
   color: white;
+}
+table {
+  font-size: 16px;
 }

@@ -5,50 +5,52 @@ block css
 
 block content
     .container
-      h3 Register
-      .register.col-xs-12.col-sm-6
-          table
-            tbody
-              tr
-                td Enter your user name:
-              tr
-                td
-                  input#userR(type= 'text')
-              tr
-                td Enter your password:
-              tr
-                td 
-                  input#passR(type= 'password')
-              tr
-                td Re-enter your password:
-              tr
-                td 
-                  input#rePassR(type= 'password')
-              tr
-                td 
-                  button.btn.btn-primary#register Register
-              tr
-                td
-                  span#err.err
-      h3 Log in
-      .login.col-xs-12.col-sm-6
-          table
-            tbody
-              tr
-                td User Name
-              tr
-                td
-                  input#userL(type= 'text')
-              tr
-                td Password
-              tr
-                td 
-                  input#passL(type= 'password')
-              tr
-                td 
-                  button.btn.btn-primary#login Login
-              tr
-                td
-                  span#errLogin.err
+      .register.col-xs-12.col-sm-4.col-sm-offset-2
+        h3 Register
+        br
+        table
+          tbody
+            tr
+              td Enter your user name:
+            tr
+              td
+                input#userR(type= 'text')
+            tr
+              td Enter your password:
+            tr
+              td 
+                input#passR(type= 'password')
+            tr
+              td Re-enter your password:
+            tr
+              td 
+                input#rePassR(type= 'password')
+            tr
+              td 
+                button.btn.btn-primary#register Register
+            tr
+              td
+                span#err.err
+      .login.col-xs-12.col-sm-4
+        h3 Log in
+        br
+        table
+          tbody
+            tr
+              td User Name
+            tr
+              td
+                input#userL(type= 'text')
+            tr
+              td Password
+            tr
+              td 
+                input#passL(type= 'password')
+            tr
+              td 
+                button.btn.btn-primary#login Login
+            tr
+              td
+                span#errLogin.err
 block js
     script(src='/js/indexPage.js')
